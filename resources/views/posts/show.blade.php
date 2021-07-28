@@ -34,7 +34,7 @@
       $.maintainscroll();
     })(jQuery);
   </script>
-  <script src="js/app.js"></script>
+  <script src="{{ secure_asset('js/app.js') }}"></script>
   <script type="text/javascript">
     const rt = document.getElementById("rt");
     const title = document.getElementById("title").textContent;

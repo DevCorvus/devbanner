@@ -1,0 +1,4 @@
+<section class="text-sm mb-3 italic text-gray-200 border-l-2 pl-4" style="border-image-slice: 1; border-image-source: linear-gradient(to bottom, #2b5876, #4e4376);">
+  <h2 id="title" class="inline"><strong>DevBanner</strong></h2>
+  <p aria-labelledby="title" class="inline"> is my personal blog where I discuss the most interesting topics in the world of <strong>Software Development</strong> (especially the Web) from a slightly different perspective. Browse and feel free to choose or search for a topic of your liking and be aware of the most popular web technologies in the <strong>TOP TECH</strong>. Here you can find varied content and with a more "chill" approach for those who love a bit of narrative tasting through articles about the software that we love so much and that causes us headaches at the same time. Don't miss the latest news in content and features that we offer for you. <span class="text-green-300">Enjoy It! ♥</span></p>
+</section>

@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   @yield("meta")
   <link rel="canonical" href="{{ route('home') }}">
-  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-  <link rel="shortcut icon" href="{{ asset('favicon.png') }}" type="image/png">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
   @yield("scriptsAndStylesheets")
 </head>

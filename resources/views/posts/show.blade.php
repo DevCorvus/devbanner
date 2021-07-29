@@ -6,7 +6,7 @@
 @endsection
 
 @section("scriptsAndStylesheets")
-<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=60e7486abe00eb0019c5e222&product=inline-share-buttons" async="async"></script>
+<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=61023c7c3d070900144625d8&product=sop' async='async'></script>
 @endsection
 
 @section("content")

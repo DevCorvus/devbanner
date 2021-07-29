@@ -28,7 +28,7 @@ class PostUpdateRequest extends FormRequest
             "description" => "required|string|max:160",
             "intro" => "required|string",
             "content" => "required",
-            "image" => "nullable|mimes:jpg,jpeg,png,webp|max:255",
+            "image" => "nullable|url",
         ];
     }
 }

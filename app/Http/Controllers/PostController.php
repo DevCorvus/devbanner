@@ -46,10 +46,7 @@ class PostController extends Controller
     {
         $request->validated();
 
-        $url = str_replace(" ", "-", strtolower($request->title));
-        
-        $newImageName = time() . "-" . "bg-image" . "." . $request->image->extension();
-        $request->image->move(public_path("images"), $newImageName);        
+        $url = str_replace(" ", "-", strtolower($request->title));        
 
         $request->user()->posts()->create([
             "url" => $url,
@@ -57,7 +54,7 @@ class PostController extends Controller
             "description" => $request->description,
             "intro" => $request->intro,
             "content" => $request->content,
-            "image" => $newImageName
+            "image_url" => $request->image_url
         ]);
 
         return redirect()->route("home");
@@ -106,23 +103,12 @@ class PostController extends Controller
         $request->validated();
 
         $post->update([
+            "image_url" => $request->image_url,
             "title" => $request->title,
             "description" => $request->description,
             "intro" => $request->intro,
             "content" => $request->content,
         ]);
-
-        if (isset($request->image))
-        {
-            $newImageName = time() . "-" . "bg-image" . "." . $request->image->extension();
-            $request->image->move(public_path("images"), $newImageName);
-
-            if (File::exists("images/".$post->image)){
-                File::delete("images/".$post->image);
-            }
-            
-            $post->update(["image" => $newImageName]);
-        }
 
         if (isset($request->update_url)) {
             $url = str_replace(" ", "-", strtolower($request->title));

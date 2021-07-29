@@ -28,7 +28,7 @@ class PostCreationRequest extends FormRequest
             "description" => "required|string|max:160",
             "intro" => "required|string",
             "content" => "required",
-            "image" => "required|mimes:jpg,jpeg,png,webp|max:255",
+            "image_url" => "required|url",
         ];
     }
 }

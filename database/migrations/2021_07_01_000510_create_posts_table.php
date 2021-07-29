@@ -22,7 +22,7 @@ class CreatePostsTable extends Migration
             $table->mediumText("description")->unique();
             $table->mediumText("intro");
             $table->text("content");
-            $table->string("image");
+            $table->string("image_url");
             $table->timestamps();
         });
     }

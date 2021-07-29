@@ -4,7 +4,7 @@
         <span>ARTICLE</span>
     </div>
     <div class="border-4 rounded-b-3xl" style="border-color: #243b55">
-        <div class="rounded-b-2xl bg-center bg-cover bg-no-repeat" style="background-image: url({{ asset('images/'.$post->image) }});">
+        <div class="rounded-b-2xl bg-center bg-cover bg-no-repeat" style="background-image: url({{ $post->image_url }});">
             <header
                 style="background: linear-gradient(to top, #000000, #3b3b3b48);"
                 class="rounded-b-2xl lg:pt-60 md:pt-50 pt-28"
@@ -52,5 +52,7 @@
         </div>
         @endauth
     </div>
+    <!-- ShareThis BEGIN -->
     <div class="mt-3 sharethis-inline-share-buttons"></div>
+    <!-- ShareThis END -->
 </main>

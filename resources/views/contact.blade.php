@@ -93,7 +93,7 @@
   };
   emailButton.onclick = () => {
     emailButton.innerHTML = "<strong>Copied!</strong>";
-    emailButton.className = "text-3xl p-1 w-full rounded-xl my-2 bg-white text-red-600 flex items-center justify-center";
+    emailButton.className = "text-xl md:text-3xl p-1 w-full rounded-xl my-2 bg-white text-red-600 flex items-center justify-center";
     emailButton.title = "This is my Email!";
     email.select();
     email.setSelectionRange(0, 99999);

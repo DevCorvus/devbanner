@@ -23,11 +23,17 @@
         @endif
       </ul>
     </div>
-    <div class="text-white text-xl font-mono">
-      <label class="block" for="image">Image</label>
-      <input class="my-4" type="file" name="image" id="image">
-    </div>
     <div>
+      <label class="text-white text-xl font-mono" for="image_url">Image URL</label>
+      <input
+        class="w-full p-2 rounded-sm ring ring-transparent @error('image_url') ring-red-400 @enderror focus:ring-blue-300 focus:outline-none"
+        type="text"
+        name="image_url"
+        placeholder="Image URL"
+        value="{{ old('image_url') }}"
+      >
+    </div>
+    <div class="my-3">
       <label class="text-white text-xl font-mono" for="title">Title</label>
       <input
         class="w-full p-2 rounded-sm ring ring-transparent @error('title') ring-red-400 @enderror focus:ring-blue-300 focus:outline-none"
@@ -38,7 +44,7 @@
         value="{{ old('title') }}"
       >
     </div>
-    <div class="mt-3">
+    <div>
       <label class="text-white text-xl font-mono" for="description">SEO Description</label>
       <textarea
         class="resize-none w-full p-2 rounded-sm ring ring-transparent @error('description') ring-red-400 @enderror focus:ring-blue-300 focus:outline-none"

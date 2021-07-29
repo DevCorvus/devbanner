@@ -2,7 +2,7 @@
 <article>
     <div class="mx-4 mb-8 rounded-xl border-2 border-transparent hover:border-purple-300 shadow transition duration-150 ease-in-out transform hover:scale-105">
         <a href="{{ route('posts.show', $post) }}">
-            <div class="bg-cover bg-center bg-no-repeat rounded-t-xl" style="background-image: url({{ asset('images/'.$post->image) }})">
+            <div class="bg-cover bg-center bg-no-repeat rounded-t-xl" style="background-image: url({{ $post->image_url }})">
                 <div
                     style="background: linear-gradient(to top, #000000, #142435ab);"
                     class="rounded-t-xl p-6"

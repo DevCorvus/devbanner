@@ -6,12 +6,10 @@
 @endsection
 
 @section("content")
-<header class="mt-5">
-  <h1 style="color: #243b55" class="rounded-lg shadow-lg bg-white text-center font-black tracking-wider text-3xl p-2">
-    CONTACT
-  </h1>
+<header class="header">
+  <h1>CONTACT</h1>
 </header>
-<main class="mt-5 text-xl text-gray-200">
+<main class="text-xl text-gray-200">
   <p>If you wish to contact me (Luis Portillo, DevBanner's Creator), I leave at your disposal the following means to do so. I am really excited to read your messages, questions and proposals.</p>
   <br>
   <p><strong>Note:</strong> To be honest you will not find much social activity in these networks but it is something that I plan to change gradually, it's just the beginning for me. Thanks in advance ♥</p>
@@ -72,7 +70,7 @@
 </main>
 <div class="absolute -top-full">
   <input tabindex="-1" id="discord" type="text" value="DevCorvus#4833">
-  <input tabindex="-1" id="email" type="text" value="devcorvus.2002@gmail.com">
+  <input tabindex="-1" id="email" type="text" value="devcorvus.contact@gmail.com">
 </div>
 <script type="text/javascript">
   const discord = document.getElementById("discord");
@@ -99,7 +97,7 @@
     email.setSelectionRange(0, 99999);
     document.execCommand("copy");
     setTimeout(() => {
-      emailButton.innerHTML = "<strong>devcorvus.2002@gmail.com</strong>";
+      emailButton.innerHTML = "<strong>devcorvus.contact@gmail.com</strong>";
     }, 1500);
   };
 </script>

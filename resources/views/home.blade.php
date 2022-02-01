@@ -6,10 +6,8 @@
 @endsection
 
 @section("posts")
-  <header style="background: #243b55" class="mb-6 rounded-lg min-w-full">
-    <h1 style="color: #243b55" class="rounded-lg bg-white text-center font-black tracking-wider text-3xl p-2">
-      POSTS
-    </h1>
+  <header class="header mt-0 mb-6">
+    <h1>POSTS</h1>
   </header>
   @forelse ($posts as $post)
     <x-post-miniature :post="$post"/>
@@ -22,7 +20,7 @@
 @section("top")
   <div class="mt-5 md:mt-0">
     <div style="background: #243b55">
-      <h2 style="color: #243b55" class="rounded-t-lg bg-white text-center font-black tracking-wider text-3xl p-2">
+      <h2 class="header my-0 rounded-none rounded-t-lg">
         TOP TECH
       </h2>
       <p class="py-2 text-center px-2">Most <strong>popular</strong> web technologies <strong>today</strong>.</p>

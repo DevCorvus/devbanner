@@ -6,12 +6,10 @@
 @endsection
 
 @section("content")
-<header class="mt-5">
-  <h1 style="color: #243b55" class="rounded-lg shadow-lg bg-white text-center font-black tracking-wider text-3xl p-2">
-    ABOUT
-  </h1>
+<header class="header">
+  <h1>ABOUT</h1>
 </header>
-<main class="mt-5 text-xl text-gray-200">
+<main class="text-xl text-gray-200">
   <ul class="list-disc list-inside text-blue-300">
     <li>
       <a class="transition duration-100 hover:text-blue-100" href="#what-is-this-about?">

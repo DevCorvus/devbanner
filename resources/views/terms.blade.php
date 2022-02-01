@@ -6,12 +6,10 @@
 @endsection
 
 @section("content")
-<header class="mt-5">
-  <h1 style="color: #243b55" class="rounded-lg shadow-lg bg-white text-center font-black tracking-wider text-3xl p-2">
-    TERMS AND CONDITIONS
-  </h1>
+<header class="header">
+  <h1>TERMS AND CONDITIONS</h1>
 </header>
-<main class="mt-5 text-xl text-gray-200">
+<main class="text-xl text-gray-200">
   <section>
     <h2 style="color: #4671a1">Important:</h2>
     <p>Please take a moment to read the terms and conditions detailed below. If you agree with them, then you can proceed to the website.</p>
@@ -111,7 +109,7 @@
     </ol>
     <p>Basically ... DO NOT use the comment section for what was not intended, which is only to generate feedback on our posts.</p>
   </section>
-  {{-- <hr class="mt-4 mb-3">
+  <hr class="mt-4 mb-3">
   <section>
     <h2 style="color: #4671a1">Security</h2>
     <p>DevBanner takes reasonably adequate security measures to detect the existence of viruses. In addition, you will see that the communication between the user and DevBanner uses a secure channel, and the transmitted data is encrypted thanks to the HTTPS protocol, therefore I guarantee the best security conditions for the confidentiality of the users.</p>
@@ -119,7 +117,7 @@
     <p>However, the user must be aware that the security measures of computer systems on the Internet are not entirely reliable and that therefore the absence of viruses or other elements that may cause alterations in computer systems (software and hardware) of the user or in their documents and files contained therein.</p>
     <br>
     <p>Even so, the owner of this website, Luis Portillo, will make every effort to keep the security, functionality and information that you will find on the website updated as far as possible. If, despite everything, you find any flaws, incorrect, outdated information, etc. I would appreciate it if you would let me know through my means of contact.</p>
-  </section> --}}
+  </section>
   <hr class="mt-4 mb-3">
   <section>
     <h2 style="color: #4671a1">External use of the content on this website:</h2>

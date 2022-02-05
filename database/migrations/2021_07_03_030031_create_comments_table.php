@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -15,8 +14,8 @@ class CreateCommentsTable extends Migration
     public function up()
     {
         Schema::create('comments', function (Blueprint $table) {
-            $table->uuid("id")->primary()->default(DB::raw("uuid_generate_v4()"));
-            $table->foreignUuid("post_id");
+            $table->id();
+            $table->foreignId("post_id");
             $table->ipAddress("ip");
             $table->string("name")->nullable();
             $table->string("email");

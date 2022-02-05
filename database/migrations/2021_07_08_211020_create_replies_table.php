@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -15,8 +14,8 @@ class CreateRepliesTable extends Migration
     public function up()
     {
         Schema::create('replies', function (Blueprint $table) {
-            $table->uuid("id")->primary()->default(DB::raw("uuid_generate_v4()"));
-            $table->foreignUuid("comment_id");
+            $table->id();
+            $table->foreignId("comment_id");
             $table->string("name");
             $table->mediumText("body");
             $table->timestamps();

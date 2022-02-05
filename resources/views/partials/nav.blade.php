@@ -6,7 +6,7 @@
   <div class="flex">
     <div class="sm:pt-0.5 sm:mr-6">
       <a href="{{ route('home') }}" title="Go Home">
-        <img class="w-36" src="{{ asset('logo.svg') }}" alt="DevBanner Logo">
+        <img class="w-36" src="{{ secure_asset('logo.svg') }}" alt="DevBanner Logo">
       </a>
     </div>
     <form action="{{ route('search') }}" method="GET">
@@ -27,10 +27,18 @@
   </div>
   <ul class="flex flex-wrap pt-3 md:pt-1 font-mono gap-5">
     @auth
-    <li>
-      <a href="{{ route('posts.create') }}">
-        <span class="align-middle p-1 hover-effect">Create</span>
-      </a>
+    <li class="group relative">
+      <span class="align-middle p-1 select-none">
+        Create
+      </span>
+      <div class="flex flex-col w-24 bg-gray-100 text-black absolute top-8 text-sm p-2 rounded-md transition opacity-0 group-hover:opacity-100">
+        <a class="hover-effect" href="{{ route("posts.create") }}">
+          New Post
+        </a>
+        <a class="hover-effect" href="{{ route("topics.create") }}">
+          New Topic
+        </a>
+      </div>
     </li>
     @endauth
     <li>

@@ -6,25 +6,25 @@
 @endsection
 
 @section("content")
-<header class="mt-5">
-  <h1 style="color: #243b55" class="rounded-lg shadow-lg bg-white text-center font-black tracking-wider text-3xl p-2">
+<header class="header">
+  <h1>
     BANNED USERS ({{ $banned_ips->count() }})
   </h1>
 </header>
-<div class="mt-5 p-2 rounded-xl" style="background-color: #243b55">
+<div class="main">
   <form action="{{ route('admin.banned_users') }}" method="POST">
     @csrf
     <div>
       <label class="hidden" for="form_ip">IP Address</label>
       <input
-        class="text-center text-2xl text-black w-full p-2 rounded-sm ring ring-transparent @error('ip') ring-red-400 @enderror focus:ring-blue-300 focus:outline-none"
+        class="text-center text-2xl input @error('ip') ring-red-400 @enderror"
         type="text"
         name="ip"
         placeholder="IP Address"
         value="{{ old('ip') }}"
       >
     </div>
-    <button class="flex items-center justify-center mt-2 text-xl p-1 font-mono rounded-b-xl w-full bg-red-600 hover:bg-red-500" type="submit">
+    <button class="text-white transition flex items-center justify-center mt-2 text-xl p-1 font-mono rounded-b-xl w-full bg-red-600 hover:bg-red-500" type="submit">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
       </svg>
@@ -54,7 +54,7 @@
       </form>
     </section>
   @empty
-    <p class="text-center">There's no Banned Users to show ./</p>
+    <p class="text-center">There are no Banned Users to show ./</p>
   @endforelse
 </main>
 @endsection

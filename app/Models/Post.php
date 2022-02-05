@@ -2,15 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Topic;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Post extends Model
 {
     use HasFactory;
-
-    protected $primaryKey = "id";
-    protected $keyType = "string";
 
     protected $fillable = [
         "url",
@@ -23,6 +21,10 @@ class Post extends Model
 
     public function user() {
         return $this->belongsTo(User::class);
+    }
+
+    public function topics() {
+        return $this->belongsToMany(Topic::class);
     }
 
     public function comments() {

@@ -10,9 +10,6 @@ class Comment extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = "id";
-    protected $keyType = "string";
-
     protected $fillable = [
         "ip",
         "name",

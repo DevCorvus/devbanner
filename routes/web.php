@@ -7,6 +7,8 @@ use App\Http\Controllers\BannedUserController;
 use App\Http\Controllers\ReplyController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\GeneralController;
+use App\Http\Controllers\SearchController;
+use App\Http\Controllers\TopicController;
 use App\Http\Controllers\TopPanelController;
 
 /*
@@ -26,10 +28,13 @@ Route::get("/contact", [GeneralController::class, "contact"])->name("contact");
 Route::get("/terms", [GeneralController::class, "terms"])->name("terms");
 Route::get("/privacy", [GeneralController::class, "privacy"])->name("privacy");
 
+Route::resource("/topics", TopicController::class);
+
 Route::resource("/posts", PostController::class);
 Route::get("/posts/{post:url}", [PostController::class, "show"])->name("posts.show");
 Route::get("/posts/{post:url}/edit", [PostController::class, "edit"])->name("posts.edit");
-Route::get("/search", [PostController::class, "search"])->name("search");
+
+Route::get("/search", [SearchController::class, "index"])->name("search");
 
 Route::get("/comment/{comment}", [CommentController::class, "show"])->name("comment");
 Route::post("/comment/{post}", [CommentController::class, "store"])->middleware("validate.ip");

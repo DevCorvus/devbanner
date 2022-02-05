@@ -9,9 +9,6 @@ class BannedIp extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = "id";
-    protected $keyType = "string";
-
     protected $fillable = [
         "ip"
     ];

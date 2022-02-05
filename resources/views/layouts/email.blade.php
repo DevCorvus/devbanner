@@ -60,7 +60,7 @@
 </style>
 <body>
   <header>
-    <img src="{{ asset('logo.svg') }}" alt="DevBanner Logo">
+    <img src="{{ secure_asset('logo.svg') }}" alt="DevBanner Logo">
   </header>
   @yield("content")
 </body>

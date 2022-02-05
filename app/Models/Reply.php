@@ -7,9 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Reply extends Model
 {
-    protected $primaryKey = "id";
-    protected $keyType = "string";
-
     protected $fillable = [
         "name",
         "body"

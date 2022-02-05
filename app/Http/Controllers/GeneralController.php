@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Topic;
 use App\Models\TopPanel;
 use Illuminate\Support\Carbon;
 
@@ -12,10 +13,12 @@ class GeneralController extends Controller
     {
         $top = TopPanel::first();
         $posts = Post::latest()->paginate(5);
-        
+        $topics = Topic::all()->take(10);
+
         return view("home", [
             "posts" => $posts,
-            "top" => $top 
+            "topics" => $topics,
+            "top" => $top,
         ]);
     }
 

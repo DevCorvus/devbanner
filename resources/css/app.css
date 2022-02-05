@@ -11,4 +11,29 @@
   .hover-effect {
     @apply transition duration-200 border-b-4 border-transparent hover:border-purple-300;
   }
+
+  .button {
+    @apply text-white text-xl font-mono rounded-xl p-2 w-full transition bg-green-500 hover:bg-green-400;
+  }
+
+  .label {
+    @apply block text-white text-xl font-mono;
+  }
+
+  .input {
+    @apply w-full p-2 rounded-sm ring ring-transparent transition focus:ring-blue-300 focus:outline-none;
+  }
+
+  .main {
+    @apply rounded-xl p-4 pb-6 text-black;
+    background-color: #243b55;
+  }
+
+  .box {
+    @apply flex flex-col gap-3;
+  }
+
+  .link {
+    @apply transition hover:text-green-200 hover:underline;
+  }
 }

@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -15,7 +14,7 @@ class CreateBannedIpsTable extends Migration
     public function up()
     {
         Schema::create('banned_ips', function (Blueprint $table) {
-            $table->uuid("id")->primary()->default(DB::raw("uuid_generate_v4()"));
+            $table->id();
             $table->ipAddress("ip")->unique();
             $table->timestamps();
         });

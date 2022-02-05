@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
-use App\Models\TopPanel;
+use App\Models\Topic;
+use App\Models\PostTopic;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\File;
 use App\Http\Requests\PostUpdateRequest;
@@ -13,7 +14,7 @@ class PostController extends Controller
 {
     public function __construct()
     {
-        $this->middleware("auth")->except("index", "show", "search");
+        $this->middleware("auth")->except("index", "show");
     }
 
     /**
@@ -33,7 +34,11 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view("posts.create");
+        $topics = Topic::all()->sortBy("name");
+
+        return view("posts.create", [
+            "topics" => $topics,
+        ]);
     }
 
     /**
@@ -45,10 +50,16 @@ class PostController extends Controller
     public function store(PostCreationRequest $request)
     {
         $request->validated();
-
-        $url = str_replace(" ", "-", strtolower($request->title));        
-
-        $request->user()->posts()->create([
+        
+        $topics = array_filter($request->topic);
+        if (count($topics) != count(array_unique($topics))) {
+            $request->session()->flash("duplicated", "Duplicated topics");
+            return back();
+        }
+        
+        $url = str_replace(" ", "-", strtolower($request->title));       
+        
+        $newPost = $request->user()->posts()->create([
             "url" => $url,
             "title" => $request->title,
             "description" => $request->description,
@@ -57,6 +68,13 @@ class PostController extends Controller
             "image_url" => $request->image_url
         ]);
 
+        foreach ($request->topic as $topic) {
+            if ($topic) {
+                $topicId = (int)$topic;
+                $newPost->topics()->attach($topicId);
+            }
+        }
+        
         return redirect()->route("home");
     }
 
@@ -70,6 +88,7 @@ class PostController extends Controller
     {
         $comments = $post->comments->sortByDesc("created_at");
         $posts = Post::latest()->where("id", "!=", $post->id)->paginate(2);
+        $post->increment("views");
 
         return view("posts.show", [
             "post" => $post,
@@ -86,8 +105,13 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
+        $topics = Topic::all()->sortBy("name");
+        $postTopics = $post->topics;
+
         return view("posts.edit", [
-            "post" => $post
+            "post" => $post,
+            "postTopics" => $postTopics,
+            "topics" => $topics,
         ]);
     }
 
@@ -101,6 +125,12 @@ class PostController extends Controller
     public function update(PostUpdateRequest $request, Post $post)
     {
         $request->validated();
+        
+        $topics = array_filter($request->topic);
+        if (count($topics) != count(array_unique($topics))) {
+            $request->session()->flash("duplicated", "Duplicated topics");
+            return back();
+        }
 
         $post->update([
             "image_url" => $request->image_url,
@@ -115,6 +145,15 @@ class PostController extends Controller
             $post->update(["url" => $url]);
         }
 
+        $post->topics()->detach();
+
+        foreach ($request->topic as $topic) {
+            if ($topic) {
+                $topicId = (int)$topic;
+                $post->topics()->attach($topicId);
+            }
+        }
+        
         return redirect()->route("posts.show", $post);
     }
 
@@ -131,22 +170,5 @@ class PostController extends Controller
         }
         $post->delete();
         return redirect()->route("home");
-    }
-
-    public function search()
-    {
-        $search = request("query");
-        
-        if (!isset($search)) {
-            return back();
-        }
-
-        $top = TopPanel::first();
-        $posts = Post::where("title", "ilike", "%".$search."%")->paginate(5);
-
-        return view("home", [
-            "posts" => $posts,
-            "top" => $top
-        ]);
     }
 }

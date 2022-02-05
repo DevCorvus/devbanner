@@ -79,7 +79,7 @@
         <x-comment :comment="$comment" :post="$post" />
       @empty
         <p class="text-center p-1 text-lg font-mono rounded-lg" style="background-color: #121c24">
-          There's no comments yet. You can leave the first one!
+          There are no comments yet. You can leave the first one!
         </p>
       @endforelse
     </div>

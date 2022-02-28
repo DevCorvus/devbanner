@@ -6,7 +6,7 @@
   </a>
 </div>
 <footer id="footer" class="flex justify-between flex-wrap mt-6 rounded-t-xl p-2 border border-b-0 border-white" style="background: linear-gradient(to right, #2b5876, #4e4376);">
-  <img class="w-1/2 lg:w-1/3" src="{{ secure_asset('logo.svg') }}" alt="DevBanner Logo">
+  <img class="w-1/2 lg:w-1/3" src="{{ App::environment() === 'local' ? asset('logo.svg') : secure_asset('logo.svg') }}" alt="DevBanner Logo">
   <ul class="flex items-center w-2/3 sm:w-auto mt-2 lg:mt-0 order-last flex-wrap lg:order-none text-xl font-medium gap-4">
     <li>
       <a href="{{ route('terms') }}">

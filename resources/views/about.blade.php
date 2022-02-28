@@ -1,6 +1,7 @@
 @extends("layouts.generic")
 
 @section("meta")
+<meta property="og:type" content="website">
 <meta name="description" content="DevBanner's About Page.">
 <title>About | DevBanner</title>
 @endsection

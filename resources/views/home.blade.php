@@ -1,6 +1,7 @@
 @extends("layouts.main")
 
 @section("meta")
+<meta property="og:type" content="website">
 <meta name="description" content="Welcome to my software development blog where the most interesting and curious topics are discussed in a completely aberrant and eloquent way.">
 <title>DevBanner</title>
 @endsection

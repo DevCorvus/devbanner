@@ -6,7 +6,7 @@
   <div class="flex">
     <div class="sm:pt-0.5 sm:mr-6">
       <a href="{{ route('home') }}" title="Go Home">
-        <img class="w-36" src="{{ secure_asset('logo.svg') }}" alt="DevBanner Logo">
+        <img class="w-36" src="{{ App::environment() === 'local' ? asset('logo.svg') : secure_asset('logo.svg') }}" alt="DevBanner Logo">
       </a>
     </div>
     <form action="{{ route('search') }}" method="GET">

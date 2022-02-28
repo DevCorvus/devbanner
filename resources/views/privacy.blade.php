@@ -1,6 +1,7 @@
 @extends("layouts.generic")
 
 @section("meta")
+<meta property="og:type" content="website">
 <meta name="description" content="DevBanner's Privacy and Cookies Policy Page.">
 <title>Privacy & Cookies | DevBanner</title>
 @endsection

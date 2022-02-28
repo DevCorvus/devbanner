@@ -1,6 +1,7 @@
 @extends("layouts.generic")
 
 @section("meta")
+<meta property="og:type" content="article">
 <meta name="description" content="{{ $post->description }}">
 <title>{{ $post->title }} | DevBanner</title>
 @endsection
@@ -34,7 +35,7 @@
       $.maintainscroll();
     })(jQuery);
   </script>
-  <script src="{{ secure_asset('js/app.js') }}"></script>
+  <script src="{{ App::environment() === 'local' ? asset('js/app.js') : secure_asset('js/app.js') }}"></script>
   <script type="text/javascript">
     const rt = document.getElementById("rt");
     const title = document.getElementById("title").textContent;

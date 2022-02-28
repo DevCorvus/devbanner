@@ -63,7 +63,7 @@
             <hr class="my-3">
             <div class="flex justify-between tracking-wide">
                 <div class="flex items-center">
-                    <img class="w-20" src="{{ secure_asset('logo.svg') }}" alt="DevBanner Logo">
+                    <img class="w-20" src="{{ App::environment() === 'local' ? asset('logo.svg') : secure_asset('logo.svg') }}" alt="DevBanner Logo">
                     <span class="text-yellow-300 mx-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" />

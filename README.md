@@ -1,62 +1,27 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# DevBanner
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+My personal blog like a mini CMS developed in Laravel, TailwindCSS and Postgres.
 
-## About Laravel
+**Check it out: https://devbanner.herokuapp.com**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Context
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+> NOTE: This is just a public update of the project to make it a little bit more presentable.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+This is my first project developed and published in Laravel and also in general. As this was the first big step I took in the development of something, whatever it was, I took it relatively seriously. It wasn't completely just a simple learning project but something that I would really use and that I would try to grow over time or that, at least, was the intention.
 
-## Learning Laravel
+Of course, as this was my first experience in the development and deployment of a website, the process was plagued with obstacles, however I learned a lot from them and found pleasure in submitting myself to more and more challenges of this type.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+The code and implementations in general are pretty simple and crude in my opinion. In addition, the lack of experience surely reveals many issues that I really did not find the time or motivation to fix or improve, especially since this ecosystem in particular (PHP / Laravel) was moving further and further away from the last projects in which I was involved and that it was not entirely clear that it would be worth going back.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+I plan to remake this idea with technologies that I feel more comfortable with and in general an almost completely different style, integrated into [my personal website](https://www.devcorvus.com). The problem, however, is that I still haven't found the motivation to start something that I don't know if I will apply the dedication it needs, such as running a blog, giving your opinion on different well-founded topics with an interesting approach and that, in general, are useful and of good quality. Although I have to say that sharing my opinion publicly is not necessarily my thing, but I can try it if I find the time and something that is really worth discussing and can contribute something.
 
-## Laravel Sponsors
+I apologize for those people who were expecting more content on the blog, although I doubt there was even any _lmao_. Anyway, I'll keep the project going at least (in case it goes down or something), as it is part of my portfolio.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+I'll post this repo without any further modification beyond this README. I am satisfied with the learning it has given me and the result in general, but I plan to continue for now with new and interesting challenges for me.
 
-### Premium Partners
+Well that's it for now and thank you for reading! ❤️
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+![Sad Lonely Dwight Gif](https://c.tenor.com/JezcXA9f3-kAAAAd/sad-lonely.gif)
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+_\- DevCorvus_

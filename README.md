@@ -2,8 +2,6 @@
 
 My personal blog like a mini CMS developed in Laravel, TailwindCSS and Postgres.
 
-**Check it out: https://devbanner.herokuapp.com**
-
 ## Context
 
 > NOTE: This is just a public update of the project to make it a little bit more presentable.
@@ -14,7 +12,7 @@ Of course, as this was my first experience in the development and deployment of 
 
 The code and implementations in general are pretty simple and crude in my opinion. In addition, the lack of experience surely reveals many issues that I really did not find the time or motivation to fix or improve, especially since this ecosystem in particular (PHP / Laravel) was moving further and further away from the last projects in which I was involved and that it was not entirely clear that it would be worth going back.
 
-I plan to remake this idea with technologies that I feel more comfortable with and in general an almost completely different style, integrated into [my personal website](https://www.devcorvus.com). The problem, however, is that I still haven't found the motivation to start something that I don't know if I will apply the dedication it needs, such as running a blog, giving your opinion on different well-founded topics with an interesting approach and that, in general, are useful and of good quality. Although I have to say that sharing my opinion publicly is not necessarily my thing, but I can try it if I find the time and something that is really worth discussing and can contribute something.
+I plan to remake this idea with technologies that I feel more comfortable with and in general an almost completely different style, integrated into [my personal website](https://devcorvus.vercel.app/). The problem, however, is that I still haven't found the motivation to start something that I don't know if I will apply the dedication it needs, such as running a blog, giving your opinion on different well-founded topics with an interesting approach and that, in general, are useful and of good quality. Although I have to say that sharing my opinion publicly is not necessarily my thing, but I can try it if I find the time and something that is really worth discussing and can contribute something.
 
 I apologize for those people who were expecting more content on the blog, although I doubt there was even any _lmao_. Anyway, I'll keep the project going at least (in case it goes down or something), as it is part of my portfolio.
 
